@@ -5,8 +5,15 @@
 ## 小程序的双向绑定很鸡肋(model:value)，当页面中input较多时赋值就变得些许麻烦。
 ```
 <input  bindinput="input"   data-type="name" /> 
+<input  bindinput="input"   data-type="phone" /> 
+<input  bindinput="input"   data-type="password" /> 
 
-//双向绑定
+data(){
+  name: "",
+  phone: "",
+  password: ""
+}
+
 input(e) {
   this.setData({
     [`${e.target.dataset.type}`]: e.detail.value
