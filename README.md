@@ -28,3 +28,14 @@ const num2 = 1.69 | 0;
 const num3 = 1.69 >> 0;
 // num1 num2 num3 => 1 1 1
 ```
+## 时间戳
+```
+const timestamp = +new Date("2021-06-19");
+// timestamp => 1550102400000
+```
+## 精确小数
+```
+const RoundNum = (num, decimal) => Math.round(num * 10 ** decimal) / 10 ** decimal;
+const num = RoundNum(1.69, 1);
+// num => 1.7
+```
