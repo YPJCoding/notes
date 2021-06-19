@@ -21,3 +21,10 @@ input(e) {
   console.log(this.data[`${e.target.dataset.type}`])
 }
 ```
+## 取整
+```
+const num1 = ~~ 1.69;
+const num2 = 1.69 | 0;
+const num3 = 1.69 >> 0;
+// num1 num2 num3 => 1 1 1
+```
