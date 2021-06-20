@@ -39,3 +39,10 @@ const RoundNum = (num, decimal) => Math.round(num * 10 ** decimal) / 10 ** decim
 const num = RoundNum(1.69, 1);
 // num => 1.7
 ```
+## 优雅处理Async/Await参数
+```
+function AsyncTo(promise) {
+    return promise.then(data => [null, data]).catch(err => [err]);
+}
+const [err, res] = await AsyncTo(Func());
+```
