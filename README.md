@@ -3,7 +3,7 @@
 
 # 小程序
 ## 小程序的双向绑定很鸡肋(model:value)，当页面中input较多时赋值就变得些许麻烦。
-```
+```javascript
 <input  bindinput="input"   data-type="name" /> 
 <input  bindinput="input"   data-type="phone" /> 
 <input  bindinput="input"   data-type="password" /> 
@@ -22,25 +22,25 @@ input(e) {
 }
 ```
 ## 取整
-```
+```javascript
 const num1 = ~~ 1.69;
 const num2 = 1.69 | 0;
 const num3 = 1.69 >> 0;
 // num1 num2 num3 => 1 1 1
 ```
 ## 时间戳
-```
+```javascript
 const timestamp = +new Date("2021-06-19");
 // timestamp => 1550102400000
 ```
 ## 精确小数
-```
+```javascript
 const RoundNum = (num, decimal) => Math.round(num * 10 ** decimal) / 10 ** decimal;
 const num = RoundNum(1.69, 1);
 // num => 1.7
 ```
 ## 优雅处理Async/Await参数
-```
+```javascript
 function AsyncTo(promise) {
     return promise.then(data => [null, data]).catch(err => [err]);
 }
@@ -48,7 +48,7 @@ const [err, res] = await AsyncTo(Func());
 ```
 
 ## 输入框 金额 两位小数
-```
+```javascript
 /**
  * 金额输入 两位小数
  * @param {Number} val 
