@@ -68,3 +68,8 @@ export function money(val) {
   return num
 }
 ```
+
+## 输入框 纯数字
+```
+e.replace(/[^\d]/g, '')
+```javascript
