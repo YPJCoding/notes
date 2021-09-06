@@ -70,6 +70,6 @@ export function money(val) {
 ```
 
 ## 输入框 纯数字
-```
-e.replace(/[^\d]/g, '')
 ```javascript
+e.replace(/[^\d]/g, '')
+```
