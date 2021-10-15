@@ -73,3 +73,14 @@ export function money(val) {
 ```javascript
 e.replace(/[^\d]/g, '')
 ```
+
+## 输入框非空的判断
+```javascript
+if(value !== null && value !== undefined && value !== ''){
+    //...
+}
+
+if(value??'' !== ''){
+  //...
+}
+```
