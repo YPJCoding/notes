@@ -74,3 +74,37 @@ export function money(val) {
 e.replace(/[^\d]/g, '')
 ```
 
+## 当if的判断条件比较多时，或许更需要用Array.some | Array.every |Array.includes
+```javascript
+if(a === 1 || a === 2 || a ===3 || a ===4){
+   //....
+}
+
+//更容易读的写法
+if([1,2,3,4].includes(a)){
+  //....
+}
+
+//多条件语句
+if(condition1 && condition2 && condition3){
+   //...
+}
+
+//更易读的写法
+const conditions = [condition1, condition2, condition3];
+if(conditions.every(c=>c)){
+   //...
+}
+
+// 多条件或
+if(condition1 || condition2 || condition3){
+   //...
+}
+
+// 更易读的写法
+const conditions = [condition1, condition2, condition3];
+if(conditions.some(c=>c)){
+   //...
+}
+
+```
